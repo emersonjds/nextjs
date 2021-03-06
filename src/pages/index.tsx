@@ -1,7 +1,9 @@
+import { Title } from "../styles/pages/Home";
+
 export default function Home() {
   return (
     <div>
-      <h1>Starter</h1>
+      <Title>Starter</Title>
     </div>
   );
 }
