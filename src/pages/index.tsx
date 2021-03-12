@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Title } from "../styles/pages/Home";
+import { Title, TextProduct } from "../styles/pages/Home";
 
 interface IHouse {
   id: number;
@@ -25,7 +25,7 @@ export default function Home() {
       <Title>Home Next</Title>
       <ul>
         {houses.map((house) => (
-          <li key={house.id}>{house.houseName}</li>
+          <TextProduct key={house.id}>{house.houseName}</TextProduct>
         ))}
       </ul>
     </div>
