@@ -19,6 +19,7 @@ export default function Home() {
         setHouses(data);
       });
     });
+    console.log(houses);
   }, []);
   return (
     <div>
