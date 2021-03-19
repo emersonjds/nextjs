@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Title, TextProduct } from "../styles/pages/Home";
 
@@ -26,7 +26,7 @@ export default function Home() {
       <Title>Home Next</Title>
       <ul>
         {houses.map((house) => (
-          <TextProduct key={house.id}>{house.houseName}</TextProduct>
+          <TextProduct key={house.id}>{house.owner}</TextProduct>
         ))}
       </ul>
     </div>

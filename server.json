@@ -1,0 +1,12 @@
+{
+    "houses": [
+        {
+            "id": 1,
+            "owner": "Emerson Silva"
+        },
+        {
+            "id": 2,
+            "owner": "Jairo Iglesias"
+        }
+    ]
+}
