@@ -1,5 +1,7 @@
 import { GetStaticProps } from "next";
 
+import { Title, TextProduct } from "../../styles/pages/Home";
+
 
 interface IProduct {
     id: number;
@@ -13,14 +15,15 @@ interface ProductProps {
 
 export default function Top10({ products }: ProductProps) {
     return (
-        <div>
+        <div style={{padding: '2em'}}>
             <ul>
+                <Title>Produtos</Title>
                 {
                     products.map(product => (
                         <li key={product.id}>
-                            <span>
+                            <TextProduct>
                                 {product.productName}
-                            </span>
+                            </TextProduct>
                         </li>
                     ))
                 }
