@@ -2,11 +2,15 @@
     "houses": [
         {
             "id": 1,
-            "owner": "Emerson Silva"
+            "owner": "Emerson Silva",
+            "houseName": "Mansao Maromba",
+            "value": 1.5
         },
         {
             "id": 2,
-            "owner": "Jairo Iglesias"
+            "owner": "Jairo Iglesias",
+            "houseName": "Mansao Maromba",
+            "value": 1.5
         }
     ]
 }

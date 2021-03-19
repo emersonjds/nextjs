@@ -10,18 +10,12 @@ interface IHouse {
   value: number;
 }
 
-export default function Home() {
-  const [houses, setHouses] = useState<IHouse[]>([]);
+interface HomeProps {
+  houses: IHouse[];
+}
 
-  useEffect(() => {
-    //num fetch o response sempre tem que ser transformado em json
-    fetch("http://localhost:3333/houses").then((response) => {
-      response.json().then((data) => {
-        setHouses(data);
-      });
-    });
-    console.log(houses);
-  }, []);
+export default function Home({houses}: HomeProps) {
+ 
   return (
     <div>
       <Title>Home Next</Title>
@@ -34,13 +28,13 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await fetch('https://localhost:3333/houses');
-  const { data } = response.json();
+export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
+  const response = await fetch('http://localhost:3333/houses');
+  const houses = await response.json();
 
   return {
     props: {
-      data.houses
+      houses
     }
   }
 }
