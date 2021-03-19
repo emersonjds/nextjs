@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { GetServerSideProps } from "next";
+import { useState, useEffect } from "react";
 
 import { Title, TextProduct } from "../styles/pages/Home";
 
@@ -31,4 +32,15 @@ export default function Home() {
       </ul>
     </div>
   );
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const response = await fetch('https://localhost:3333/houses');
+  const { data } = response.json();
+
+  return {
+    props: {
+      data.houses
+    }
+  }
 }
