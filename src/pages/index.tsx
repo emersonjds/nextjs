@@ -14,14 +14,17 @@ interface HomeProps {
   houses: IHouse[];
 }
 
-export default function Home({houses}: HomeProps) {
- 
+export default function Home({ houses }: HomeProps) {
+
   return (
     <div>
       <Title>Home Next</Title>
       <ul>
         {houses.map((house) => (
-          <TextProduct key={house.id}>{house.owner}</TextProduct>
+          <li key={house.id}>
+            <TextProduct >{house.owner}</TextProduct>
+          </li>
+
         ))}
       </ul>
     </div>

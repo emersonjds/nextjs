@@ -12,5 +12,22 @@
             "houseName": "Mansao Maromba",
             "value": 1.5
         }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "productName": "Camisa Futebol Chelsea",
+            "price": 250
+        },
+        {
+            "id": 2,
+            "productName": "Camisa Futebol Chelsea",
+            "price": 250
+        },
+        {
+            "id": 3,
+            "productName": "Camisa Futebol Chelsea",
+            "price": 250
+        }
     ]
 }
